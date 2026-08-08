@@ -1,5 +1,7 @@
 # Toronto Crime SQL Analytics
 
+_Portfolio sprint timeline: January–September 2026. Reported results retain their actual run dates._
+
 Twenty business questions about a decade of Toronto police data, each answered with one SQL
 query. Self-contained: DuckDB, one CSV, one command.
 
