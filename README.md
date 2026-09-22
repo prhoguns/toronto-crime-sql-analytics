@@ -64,3 +64,7 @@ scripts/      download.py · build_db.py · run.py
 ```
 
 Data is published under the [Open Government Licence – Toronto](https://open.toronto.ca/open-data-license/).
+
+## Acknowledgments
+
+AI tools assisted with documentation and repository organization.
