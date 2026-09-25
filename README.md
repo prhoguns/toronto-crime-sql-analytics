@@ -1,6 +1,6 @@
 # Toronto Crime SQL Analytics
 
-**Start here:** [Live dashboard](https://prhoguns.github.io/toronto-crime-sql-analytics/) · [Findings](FINDINGS.md) · [Portfolio case study](https://prhoguns.github.io/case-studies/toronto-crime-sql-analytics.html)
+**Start here:** [Live dashboard](https://prhoguns.github.io/toronto-crime-sql-analytics/) · [Findings](FINDINGS.md) · [Portfolio case study](https://rhoguns.orhogun.workers.dev/case-studies/toronto-crime-sql-analytics.html)
 
 **What I did:** I framed twenty questions, wrote one SQL query for each, built the DuckDB workflow and published result tables and charts. In the 22 September 2026 snapshot, the analysis covers 452,949 police-reported incident rows. The findings document data caveats, including multiple offence rows per event and the limits of per-resident neighbourhood rates.
 
