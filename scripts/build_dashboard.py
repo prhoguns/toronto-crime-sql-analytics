@@ -26,7 +26,7 @@ heat = q("05_weekday_hour_heatmap")
 premises = q("17_break_and_enter_premises_trend")
 hours = q("04_peak_hours_by_category")
 dq = q("20_data_quality_profile").iloc[0]
-top_rates = rates[rates.bucket == "highest"].sort_values("per_1000")
+top_rates = rates[rates.bucket == "highest"].sort_values(["per_1000", "neighbourhood_name"], ascending=[True, False])  # ties: stable order run to run
 grid = heat.pivot(index="dow_num", columns="occurrence_hour", values="assaults")
 
 data = {
@@ -68,7 +68,7 @@ html = f"""<!doctype html>
   <div class="kpi"><b>{int(rolling['trailing_12m_avg'].iloc[-1])}</b><span>auto thefts / month, trailing 12-month avg</span></div>
 </div>
 <main>
-  <div class="card"><h2>Incidents by category and year</h2><p>2025 is a partial year.</p><div id="yearly" class="plot"></div></div>
+  <div class="card"><h2>Incidents by category and year</h2><p>{data['totals']['latest'][:4]} is a partial year.</p><div id="yearly" class="plot"></div></div>
   <div class="card"><h2>Auto theft per month</h2><p>Bars: monthly count. Line: trailing 12-month average.</p><div id="rolling" class="plot"></div></div>
   <div class="card"><h2>Highest 2024 rate per 1,000 residents</h2><p>2021 census population. Downtown cores have small resident counts and large daytime populations.</p><div id="rates" class="plot"></div></div>
   <div class="card"><h2>Assaults by weekday and hour</h2><p>All years. Midnight and weekend nights dominate.</p><div id="heat" class="plot"></div></div>

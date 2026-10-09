@@ -2,6 +2,8 @@
 
 **Start here:** [Live dashboard](https://prhoguns.github.io/toronto-crime-sql-analytics/) · [Findings](FINDINGS.md) · [Portfolio case study](https://rhoguns.orhogun.workers.dev/case-studies/toronto-crime-sql-analytics.html)
 
+The live dashboard is rebuilt from the City's current data every Monday by [`refresh.yml`](.github/workflows/refresh.yml) and shows the latest report date in its header. The findings and `results/` tables are the written analysis of the 22 September 2026 snapshot and are not rewritten automatically.
+
 **What I did:** I framed twenty questions, wrote one SQL query for each, built the DuckDB workflow and published result tables and charts. In the 22 September 2026 snapshot, the analysis covers 452,949 police-reported incident rows. The findings document data caveats, including multiple offence rows per event and the limits of per-resident neighbourhood rates.
 
 _Portfolio sprint timeline: January–September 2026. Reported results retain their actual run dates._
