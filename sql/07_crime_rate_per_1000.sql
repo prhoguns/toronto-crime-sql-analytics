@@ -11,7 +11,7 @@ with rates as (
     where i.occurrence_year = 2024
     group by 1, 2
 )
-(select 'highest' as bucket, * from rates order by per_1000 desc limit 10)
+(select 'highest' as bucket, * from rates order by per_1000 desc, neighbourhood_name limit 10)
 union all
-(select 'lowest' as bucket, * from rates order by per_1000 asc limit 10)
-order by bucket, per_1000 desc;
+(select 'lowest' as bucket, * from rates order by per_1000 asc, neighbourhood_name limit 10)
+order by bucket, per_1000 desc, neighbourhood_name;
